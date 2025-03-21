@@ -484,8 +484,6 @@ def do_unpack(in_directory, in_arch, out_dir, force):
         json_data = arch_assembly_store.extract_all(json_data, out_dir)
 
     # Save the large config out.
-    with open(constants.FILE_ASSEMBLIES_JSON, "r") as af:
-        print(af.name)
     with open(constants.FILE_ASSEMBLIES_JSON, "w") as assembly_file:
         assembly_file.write(json.dumps(json_data, indent=4))
 
